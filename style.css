@@ -4,6 +4,7 @@
 body{   
     font-family: rubik,helvetika,arial,sans-serif;
     font-size: 14px;
+    margin:0;
 }
 a{
     color: rgb(0, 84, 168);
