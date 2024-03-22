@@ -2,6 +2,7 @@
     box-sizing: border-box; 
 }
 body{   
+    background-image:url(./assets/images/Site-background-light.webp);
     font-family: rubik,helvetika,arial,sans-serif;
     font-size: 14px;
     margin:0;
