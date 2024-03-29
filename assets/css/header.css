@@ -1,8 +1,9 @@
 .main-header{
-    background-color:rgba(7, 201, 226, 0.637);
 height: 300px;
+background-color:rgba(7, 201, 226, 0.637); 
 padding-top: 100px;
-background-image:url( ./../images/Light_background_deepslate_transition.png), url(./../images/Light_background_grass.png),   linear-gradient(0deg, rgba(181,217,221,1) 9%, rgba(181,217,221,1) 11%, rgba(181,217,221,1) 11%, rgba(181,217,221,1) 24%, rgba(8,204,241,1) 43%, rgba(0,237,238,1) 85%, rgba(8,224,233,1) 91%, rgba(0,194,245,1) 100%);
+background-image:url(./../images/Light_background_deepslate_transition.png), url(./../images/Light_background_grass.png),  linear-gradient(0deg, rgba(34,5,9,1) 32%, rgba(10,222,237,1) 57%, rgba(0,194,245,1) 100%);
+
 background-repeat:repeat-x, repeat-x, no-repeat;
 background-position:bottom left, 0 120px, 0 0;
 }
@@ -17,12 +18,32 @@ margin:auto;
 .main-menu{
 list-style: none;
 margin:0;
+font-size: 12px;
 }
+.main-menu-item::after{
+content:"\25BC";
+}
+.main-menu-item:hover::after{
+    content:"\25B2";
+}
+    
 .main-menu-item{
     display:inline-block;
     margin: 0 1.2em;
     position: relative;
-
+    padding-bottom: 30px;
+    
+}
+.main-menu-item>.submenu::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #FFFFFF transparent;
+    top: -18px;
+    left: 42%;
 }
 .main-menu-item>a{
     color:black;
@@ -42,6 +63,7 @@ text-decoration: underline;
     display: none;
     position: absolute;
     left:-50%;
+    top: 30px;
 list-style: none;
 background-color:white;
 padding:7px;
@@ -54,11 +76,18 @@ padding:7px;
 }
 .submenu-item{
     position: relative;
+    
+}
+.submenu-item:has(>.submenu)::after{
+content:"\1433";
+position: absolute;
+top:0;
+right: 0;
 }
 .submenu-item:hover>.submenu{
     display: block;
     left:100%;
-    top:0;
+    top:5px;
 }
 
 .submenu-link{
@@ -73,5 +102,20 @@ text-transform: capitalize;
 .submenu-link:hover{
     background-color:rgb(211,233,255);
     color:rgb(0 84 168);
+}
+.explore::before{
+    content:url(./../icons/book-open-blank-variant.svg);
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-2px) translateY(2.4px)
+    
+}
+.home::before{
+    content:url(./../icons/home.svg);
+    width: 15px;
+    height: 15px;
+display: inline-block;
+transform: translateX(-3px) translateY(2.1px);
 }
 
