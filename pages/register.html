@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./../assets/Site-favicon.ico" type="image/x-icon">
-    <title>Register - MInecraft Wiki </title>
-    <link rel="stylesheet" href="">
+    <title>Fandom Auth </title>
+    <script src="https://kit.fontawesome.com/78f6e8ae05.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./../assets/css/register.css">
 </head>
 <body>
-    <a href="">back</a>
+    <div class="out-wrapper">
+    <a href="http://127.0.0.1:5500/index.html">back</a>
     <section class="wrapper">
-        <header>
+        <header class="header">
             <h1>Join FANDOM Today</h1>
-            <p>Already have an accound?Sign in</p><a href="">Sign in</a>
+            <p>Already have an account?Sign in</p><a href="">Sign in</a>
         </header>
         <div class="flex-container">
             <div class="social">
                 <ul>
-                    <li><a href="">connect with facebook</a></li>
-                    <li><a href="">connect with google</a></li>
-                    <li><a href="">connect with twitch</a></li>
-                    <li><a href="">connect with apple</a></li>
+                    <li><a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=112328095453510&kid_directed_site=0&app_id=112328095453510&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D112328095453510%26redirect_uri%3Dhttps%253A%252F%252Fservices.fandom.com%252Fkratos-public%252Fself-service%252Fmethods%252Foidc%252Fcallback%252Ffacebook%26response_type%3Dcode%26scope%3Demail%2Bopenid%26state%3DOTEyMTEzODgtYzEyMi00MDE5LWE3NWItZGE2ZWQxMTc2MWQxOqJgutI0bklmuZE1hvGNcls%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D3559f41a-66b8-4e8d-bb37-26d8ed9c0c74%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fservices.fandom.com%2Fkratos-public%2Fself-service%2Fmethods%2Foidc%2Fcallback%2Ffacebook%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DOTEyMTEzODgtYzEyMi00MDE5LWE3NWItZGE2ZWQxMTc2MWQxOqJgutI0bklmuZE1hvGNcls%23_%3D_&display=page&locale=ru_RU&pl_dbl=0" target="_blank" class="btn fb"><i class="fa-brands fa-facebook" style="color: #0945d3;"></i> connect with facebook</a></li>
+                    <li><a href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?claims=%7B%22id_token%22%3A%7B%22email%22%3A%7B%22essential%22%3Atrue%7D%7D%7D&client_id=607075236220-49jpnkvik37egeg8kmoekcg7hgpagvbr.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fservices.fandom.com%2Fkratos-public%2Fself-service%2Fmethods%2Foidc%2Fcallback%2Fgoogle&response_type=code&scope=email%20openid&state=OTEyMTEzODgtYzEyMi00MDE5LWE3NWItZGE2ZWQxMTc2MWQxOgyzStQ7p01rhpKCHu7UJKY&service=lso&o2v=2&theme=mn&ddm=0&flowName=GeneralOAuthFlow" target="_blank" class="btn google"><i class="fa-brands fa-google" style="color: #B197FC;"></i> connect with google</a></li>
+                    <li><a href="https://id.twitch.tv/oauth2/authorize?claims=%7B%22id_token%22%3A%7B%22email%22%3A%7B%22essential%22%3Atrue%7D%2C%22email_verified%22%3A%7B%22essential%22%3Atrue%7D%7D%7D&client_id=mqvkzv3lswnsqsxo85qltnz52d72lw&redirect_uri=https%3A%2F%2Fservices.fandom.com%2Fkratos-public%2Fself-service%2Fmethods%2Foidc%2Fcallback%2Ftwitch&response_type=code&scope=openid+user%3Aread%3Aemail&state=OTEyMTEzODgtYzEyMi00MDE5LWE3NWItZGE2ZWQxMTc2MWQxOoxkkzPRxUFVr0HRTyXeW9E" target="_blank" class="btn twitch"><i class="fa-brands fa-twitch" style="color: #B197FC;"></i> connect with twitch</a></li>
+                    <li><a href="https://appleid.apple.com/auth/authorize?client_id=com.fandom.services&redirect_uri=https%3A%2F%2Fservices.fandom.com%2Fkratos-public%2Fself-service%2Fmethods%2Foidc%2Fcallback%2Fapple&response_mode=form_post&response_type=code&scope=openid+email&state=OTEyMTEzODgtYzEyMi00MDE5LWE3NWItZGE2ZWQxMTc2MWQxOkFK-oueKEbapVUrqdFh9BE" target="_blank" class="btn apple"><i class="fa-brands fa-apple" style="color: #000000;"></i> connect with apple</a></li>
                 </ul>
             </div>
             <form action="" class="register">
             <h2>Register with Email</h2>
             <label>
                 <input name="email" type="email" 
-                placeholder="Email">
+                placeholder="Email" required>
             </label>
             <label>
                 <input name="username" type="text" 
@@ -40,9 +43,21 @@
                 <label>
                     <input name="date" type="date">
                 </label>
+                <label>
+                <input name="subcribe" type="checkbox" checked value="subscribe">
+                <span>Email me about FANDOM news and events</span> </label>
+                <label>
+                    <input name="agree" type="checkbox" required>
+                    <span> I agree to:</span> </label>
+                    <ul>
+                        <li><a href="https://www.fandom.com/terms-of-use" target="_blank">FANDOM's Terms of Use</a></li>
+                        <li><a href="https://www.fandom.com/privacy-policy" target="_blank">Privacy Policy</a></li>
+                    </ul>
+
                 <input type="submit" value="REGISTER">
         </form>
         </div>
     </section>
+</div>
 </body>
 </html>
